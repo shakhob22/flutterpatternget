@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import '../model/post_model.dart';
 import '../service/http_service.dart';
 
-class HomeController extends GetxController {
+class SplashController extends GetxController {
   var isLoading = false.obs;
   var items = [].obs;
 

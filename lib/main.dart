@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutterpatternget/pages/home_page.dart';
 import 'package:flutterpatternget/pages/main_page.dart';
+import 'package:flutterpatternget/pages/splash_page.dart';
+import 'package:flutterpatternget/pages/starter_page.dart';
 import 'package:flutterpatternget/service/bind_service.dart';
 import 'package:flutterpatternget/service/di_service.dart';
 import 'package:get/get.dart';
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MainPage(),
+      home: const StarterPage(),
       // initialBinding: BindService(),
       // getPages: [
       //   GetPage(

@@ -4,19 +4,21 @@ import 'package:get/get.dart';
 import '../model/post_model.dart';
 import '../service/http_service.dart';
 
-class HomeController extends GetxController {
-  var isLoading = false.obs;
-  var items = [].obs;
+class StarterController extends GetxController {
+  bool isLoading = false;
+  List<Post> items = [];
 
   void apiPostList() async {
-    isLoading.value = true;
+    isLoading = true;
+    update();
     var response = await Network.GET(Network.API_LIST, Network.paramsEmpty());
 
     if (response != null) {
-      items.value = Network.parsePostList(response);
+      items = Network.parsePostList(response);
     } else {
-      items.value = [];
+      items = [];
     }
-    isLoading.value = false;
+    isLoading = false;
+    update();
   }
 }
